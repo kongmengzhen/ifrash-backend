@@ -1,2 +1,2 @@
-import "./router/indexcopy"
+import "./router/index"
 

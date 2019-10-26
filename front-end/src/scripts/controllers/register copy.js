@@ -1,10 +1,13 @@
 import registerView from '../views/register.art'
 import httpModel from '../models/http'
+
+
+
 class Register { 
-  render(){     
+  render(){  
+   
     let html =registerView()  
     $('#root').html(html)  
-    
     $('#regis').on('click',this.handleSubmit.bind(this))
     $('#verfiy').on('click',this.validatechange)
   }

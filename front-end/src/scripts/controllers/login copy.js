@@ -1,10 +1,9 @@
 import loginView from '../views/login.art'
 import httpModel from '../models/http'
 
-class Login {
+class Login { 
  
-  render() {  
-    console.log(this)     
+  render() {       
     let html =loginView()  
     $('#root').html(html)  
     // 当点击登录按钮时候 进行登录操作 
@@ -31,4 +30,5 @@ class Login {
     }
   }
 }
- export default new Login()
+
+export default new Login()
