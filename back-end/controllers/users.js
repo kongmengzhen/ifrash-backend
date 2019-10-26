@@ -71,13 +71,15 @@ const signin=async function(req,res,next){
       username
   })
   if(result){
+   
     let compareRes=await tools.compare(password,result.password)
-    console.log(compareRes)//这个结果是true  还是false
+    // console.log(compareRes)//这个结果是true  还是false
     if(compareRes){
+      req.session.user = result    
       res.render('succ', {   
         "data": JSON.stringify({
           message:"用户登录成功",
-          username
+          user: req.session.user
         })
       }) 
     }else{
@@ -95,14 +97,20 @@ const signin=async function(req,res,next){
     }) 
   }
 
-
-  
-
+}
+const loginout=function(req,res,next){
+console.log(req.session.user)
+res.json({
+  code:1,
+  msg:"安全退出成功！"
+})
 
 
 }
+
   module.exports={
       signup,
       hasUsername,
-      signin
+      signin,
+      loginout
   }

@@ -2,7 +2,7 @@ import loginView from '../views/login.art'
 import httpModel from '../models/http'
 
 class Login { 
-
+ 
   render() {       
     let html =loginView()  
     $('#root').html(html)  
@@ -17,14 +17,16 @@ class Login {
       url: '/api/users/signin',
       data
     })
-   
-    this.handleLoginSucc(result)
-  
+   console.log(result)
+    this.handleLoginSucc(result)  
   }
   handleLoginSucc(result) {
-    if(result.ret){
+    if(result.data.user){
       location.hash='layout'
-      $('.topbar-user').html(result.data.username)
+      $('#useroption').html(result.data.user.username)
+      $('#register,#signup').css({'display':'none'})
+     $('#loginout,#changeuser').css({'display':'block'})
+    
     }
   }
 }
