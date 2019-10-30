@@ -3,8 +3,7 @@ import httpModel from '../models/http'
 class Register { 
   render(){     
     let html =registerView()  
-    $('#root').html(html)  
-    
+    $('#root').html(html)      
     $('#regis').on('click',this.handleSubmit.bind(this))
     $('#verfiy').on('click',this.validatechange)
   }
@@ -14,6 +13,7 @@ class Register {
     let data = $('.form-horizontal').serialize()   
     let result = await httpModel.get({
       url: '/api/users/signup',
+      type:'POST',
       data
     })
     this.handleSubmitSucc(result)
@@ -21,7 +21,7 @@ class Register {
   handleSubmitSucc(result) {
     console.log(result.ret)
     if(result.ret){
-      location.hash='login'
+      location.hash='/login'
     
     }else{
       alert(result.data.message)

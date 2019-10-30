@@ -4,4 +4,15 @@ const Users=mongoose.model('users',{
     username:String,
     password:String
 })
-module.exports={Users}
+const Goods=mongoose.model('goods',{
+    goodsLogo:String,
+    goods_home:String,
+    goods_name:String,
+    goods_sale_price:String,
+    goods_price:String,
+    createTime: String
+})
+module.exports={
+    Users,
+    Goods
+}

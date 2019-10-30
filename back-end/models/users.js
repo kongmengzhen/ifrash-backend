@@ -5,6 +5,7 @@ const save=(data)=>{
     return users.save()    
 }
 
+
 const findone=(conditions)=>{
     return Users.findOne(conditions)
 }

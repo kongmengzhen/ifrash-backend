@@ -1,0 +1,43 @@
+<!-- general form elements -->
+<div class="box box-primary">
+    <div class="box-header with-border">
+    <div class="box-title" style="font-size: 28px;margin-bottom: 10px;">商品添加</div>
+    </div>
+    <!-- /.box-header -->
+    <!-- form start -->
+    <form role="form"
+     method="post" 
+     action="/api/goods" 
+     id='addgoodsform' 
+     enctype="multipart/form-data">
+      <div class="box-body">
+          <div class="form-group">
+              <label for="goodsLogo">商品Logo</label>
+              <input type="file" class="form-control" id="goodsLogo" name="goodsLogo" placeholder="请选择商品Logo">
+            </div>
+        <div class="form-group">
+          <label for="goods_home">店铺名称</label>
+          <input type="text" class="form-control" id="goods_home" name="goods_home" placeholder="请输入商品名称">
+        </div>
+        <div class="form-group">
+          <label for="goods_name">商品名称</label>
+          <input type="text" class="form-control" id="goods_name" name="goods_name" placeholder="请输入商品名称">
+        </div>
+        <div class="form-group">
+          <label for="goods_sale_price">商品售价</label>
+          <input type="text" class="form-control" id="goods_sale_price" name="goods_sale_price" placeholder="请输入商品售价">
+        </div>
+        <div class="form-group">
+          <label for="goods_price">商品原价</label>
+          <input type="text" class="form-control" id="goods_price" name="goods_price" placeholder="请输入商品原价">
+        </div>
+      </div>
+      <!-- /.box-body -->
+  
+      <div class="box-footer">
+        <button type="button" class="btn btn-default">返回</button>
+        <button type="submit" id="add_goods" class="btn btn-info pull-right">提交</button>
+      </div>
+    </form>
+  </div>
+  <!-- /.box -->

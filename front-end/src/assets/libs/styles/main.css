@@ -4318,17 +4318,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', end
   border-color: #bf3773 !important;
 }
 .panel.panel-violet {
-  border-color: #9351ad;
+  border-color:#f9f9f9;
 }
 .panel.panel-violet > .panel-heading {
   color: #FFFFFF;
   background: #9351ad;
-  border-color: #9351ad !important;
+  border-color:#f9f9f9 !important;
 }
 .panel.panel-violet > .panel-footer {
   color: #FFFFFF;
   background: #9351ad;
-  border-color: #9351ad !important;
+  border-color:#f9f9f9;
 }
 .panel.panel-grey {
   border-color: #4b5d67;
